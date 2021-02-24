@@ -1,0 +1,518 @@
+/*!
+Theme Name: beifti
+Theme URI: http://underscores.me/
+Author: iftekhar
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: beifti
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+beifti is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/* 
+COLOR REFERENCES
+
+Green: #79b044;
+Salmon: #dd5638;
+Blue Gray: #3e4249;
+
+*/
+
+/* ---- GENERAL ---- */
+body{
+    margin-top: 50px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+    background-color: #f9f9f9;
+}
+/* ----- GLOBALS----- */
+a:link, a:visited{
+    color: #dd5638;
+}
+a:hover{
+    text-decoration: none;
+    color: #c9302c;
+}
+h1,h2,h3,h4,h5,h6{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-weight: bold;
+}
+h1{
+    font-size: 3em;
+}
+h1,h2{
+    margin: 0 0 40px;
+}
+h3{
+    margin: 20px 0;
+}
+h4{
+    font-size: 18px;
+}
+button, input, .btn, a.btn{
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    color: white;
+}
+.btn{
+    font-weight: bold;
+}
+.btn:focus{
+    outline: none;
+}
+.btn-success{
+    background-color: #79b044;
+    border: none;
+}
+.btn-success:hover{
+    background-color: #6a9b3d;
+    border-color: #6a9b3d;
+}
+.btn-danger{
+    background: #dd5638;
+    border-color: #d95131;
+}
+blockquote{
+    padding: 0;
+    border: none;
+    font-style: italic;
+    text-align: left;
+}
+
+blockquote cite{
+    display: block;
+    color: #777777;
+    margin: 15px 0 0 0;
+}
+blockquote::before{
+    display: none;
+}
+
+li.current-menu-item a{
+    color: white !important;
+}
+input{
+    color: #000;
+}
+.comment-form-comment{
+    overflow: hidden;
+    width: 90%;
+}
+
+.comment-form-comment label{
+    float: left;
+    width: 10%;
+}
+.comment-form-comment textarea{
+    height: 100px;
+    float: right;
+    width: 88%;
+}
+.comment-form .submit{
+    border: none;
+    background-color: #dd5638;
+    color: white;
+    padding: 10px 15px;
+}
+.comment-form .submit:hover{
+    background-color: #d95131;
+}
+/* ------ HERO ----- */
+#hero{
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7)), url('assets/img/header.jpg') 50% 0 repeat fixed;
+    min-height: 500px;
+    padding: 40px 0;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+#hero article{
+    width: 100%;
+    text-align: center;
+}
+#hero .hero-text{
+    margin-top: 30px;
+}
+#price-timeline{
+    margin: 30px 0 60px;
+    text-align: center;
+}
+#price-timeline .price{
+    display: inline-block;
+    margin: 0 2% 0 0;
+    width: 30%;
+    background-color: #3e4249;
+    padding: 10px 20px 30px;
+    position: relative;
+    vertical-align: top;
+}
+#price-timeline .price.active{
+    background: #dd5638;
+}
+#price-timeline .price span{
+    background: #101010;
+    display: block;
+    height: 70px;
+    width: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    margin-left: -35px;
+}
+
+#price-timeline h4{
+    margin: 0 0 10px;
+}
+#price-timeline h4 small{
+    color: white;
+    font-weight: bold;
+    display: block;
+    font-size: 12px;
+}
+/* ---------OPTIN -------- */
+#optin{
+    background: #3e4249;
+    padding: 20px 0;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-size: 1.2em;
+}
+#optin p{
+    margin: 7px 0 0 0;
+}
+/* ---- LAYOUT----- */
+.row + .row{
+    margin-top: 20px;
+}
+
+section{
+    padding: 80px 0;
+}
+
+#boost-income{
+    background: #eee;
+}
+.section-header{
+    text-align: center;
+}
+.section-header img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+section.main-content{
+    padding: 40px 0;
+}
+section h2{
+    margin: 20px 0 40px;
+}
+section h3{
+    margin: 30px 0 10px;
+}
+#primary{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.feature-image{
+    display: table;
+    width: 100%;
+}
+.feature-image-default{
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7)), url('assets/img/favicon.jpeg') no-repeat;
+    background-size: cover;
+}
+.feature-image-default-alt{
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7)), url('assets/img/header.jpg') no-repeat;
+    background-size: cover;
+}
+.feature-image h1.page-title{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    text-align: center;
+}
+#course-feature{
+    background-color: #3e4249;
+    color: #fff;
+    text-align: center;
+}
+#project-feature{
+    text-align: center;
+}
+#project-feature img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+#testimonial{
+    text-align: center;
+    background-color: #eee;
+}
+#testimonial .testimonials{
+    margin-bottom: 60px; 
+}
+.testimonials img{
+    width: 100px;
+    height: 100px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+#signup{
+    text-align: center;
+    background: linear-gradient(to right, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.7)), url('assets/img/map.png') center center repeat fixed;
+    background-size: cover;
+    color: white;
+    padding: 140px 0;
+}
+#signup h2{
+    font-weight: normal;
+}
+#signup h2 strong{
+    border-bottom: 2px solid #dd5638;
+}
+#signup .btn{
+    font-size: 24px;
+}
+footer{
+    background-color: #3e4249;
+    color: white;
+    padding: 20px 0 10px;
+    font-size: 12px;
+}
+footer p{
+    margin: 0;
+}
+footer a:link, footer a:visited{
+    color: white;
+}
+footer a:hover{
+    color: #dd5638;
+}
+footer li.signup-link a{
+    color: #dd5638;
+}
+footer li.signup-link a:hover{
+    font-weight: bold;
+}
+footer .footer-copyright{
+    float: right;
+}
+/* ----------BLOG ---------- */
+.post, .widget, #comments{
+    position: relative;
+    border: 1px solid #ddd;
+    background: white;
+    margin: 0 0 40px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+.post header,
+.post-body,
+#comments .comments-wrap,
+.post .post-excerpt{
+    padding: 20px;
+    text-align: justify;
+}
+.post header h3{
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #ddd;
+}
+.post header h1{
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 24px;
+}
+.post-image{
+    height: auto;
+}
+.post-image img{
+    width: 100%;
+    height: auto;
+}
+.post-details{
+    font-size: 12px;
+    width: 90%;
+}
+.post-details i.fa{
+    padding-left: 10px;
+}
+.post-details i.fa:first-child{
+    padding: 0;
+}
+/* ----COMMENTS BADGE---- */
+.post-comment-badge{
+    height: 70px;
+    width: 70px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    border: none;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    text-align: center;
+    display: table;
+    background-color: #79b044;
+}
+.post-comment-badge a{
+    display: table-cell;
+    vertical-align: middle;
+    color: white;
+    font-size: 20px;
+    line-height: 20px;
+}
+.post-comment-badge i.fa{
+    display: block;
+    font-size: 15px;
+    padding: 0;
+    margin-bottom: 4px;
+}
+.post-comment-badge:hover{
+    background-color: #8bc653;
+}
+
+#comments h3{
+    text-align: center;
+}
+#comments h4{
+    font-size: 1.3em;
+}
+#comments ol{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+#comments ol li{
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 10px 20px;
+    margin: 10px 0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, 0.03);
+}
+#comments ol li ol.children{
+    list-style: none;
+    padding: 0;
+    font-size: 0.96em;
+}
+#leave-comment{
+    margin: 40px 0 0;
+    padding: 20px 0 0;
+    border-top: 1px solid #eee;
+}
+#comments footer{
+    background: none;
+    color: inherit;
+}
+#comments footer a{
+    color: inherit;
+}
+#comments .comment-metadata{
+    margin: 10px 0 0;
+}
+/* --------- BLog Widget ------- */
+.widget{
+    padding: 20px;
+}
+.widget h4{
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: 1px solid #ddd;
+}
+.widget ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.widget ul li{
+    margin: 0 0 5px;
+}
+.widget ul li a{
+    display: block;
+}
+.widget ul li:hover{
+    position: relative;
+    left: 1px;
+}
+/* --------- Resources-------- */
+.resource{
+   margin-bottom: 40px;
+}
+.resource img{
+    width: 100%;
+}
+/* .resource:last-child{
+    margin-right: 0;
+} */
+.logged-in .navbar-fixed-top{
+	top: 32px;
+}
+.search-form input{
+    border: 1px solid #eee;
+    padding: 5px;
+    border-radius: 3px;
+    color: #000;
+}
+.search-form .search-submit{
+    border: none;
+    background-color: #dd5638;
+    color: #fff;
+}
+.search-form .screen-reader-text{
+    display: none;
+}
+.col-sm-2 i{
+    font-size: 34px;
+}
+@media(max-width: 768px){
+    .col-sm-2{
+        margin-bottom: 40px;
+    }
+    .col-sm-2 i{
+        font-size: 39px;
+    }
+    footer{
+        text-align: center;
+    }
+    footer .brand{
+        display: block;
+        padding: 10px;
+    }
+    footer .footer-copyright{
+        float: none;
+    }
+    .comment-form-comment textarea{
+       float: none;
+       width: 90%;
+    }
+}
